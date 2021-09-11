@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 const createInnerHtml = () => {
     const innerHtml = `
-        <tr>
+    <tr>
         <th></th>
         <th>Name</th>
         <th>Gender</th>
