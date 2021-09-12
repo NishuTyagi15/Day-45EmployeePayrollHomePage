@@ -6,8 +6,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 const getEmployeePayrollDataFromStorage = () => {
-    return localStorage.getItem('empPayrollList') ?
-                JSON.parse(localStorage.getItem('empPayrollList')) : [];
+    return localStorage.getItem('EmployeePayrollList') ?
+                JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
 }
 
 const createInnerHtml = () => {
@@ -24,7 +24,7 @@ const createInnerHtml = () => {
             <td>${empPayrollData._gender}</td>
             <td>${getDeptHtml(empPayrollData._department)}</td>
             <td>${empPayrollData._salary}</td>
-            <td>${empPayrollData._startDate}</td>
+            <td>${stringifyDate(empPayrollData._startDate)}</td>
             <td>
                 <img name="${empPayrollData._id}" onclick="remove(this)"
                     src="/assets/icons/delete-black-18dp.svg"
